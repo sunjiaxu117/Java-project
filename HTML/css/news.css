@@ -1,0 +1,41 @@
+/* 选择器
+元素选择器  h1 {}
+id选择器   #id {}
+类选择器   .class{} */
+/* 优先级 id>class>元素 */
+h1 {
+    color: #4D4F53;
+}
+
+#time {
+    color: antiquewhite;
+}
+
+.cls {
+    color: #968D92;
+}
+a {
+    color: black;
+    /* 去除下划线 */
+    text-decoration: none;
+}
+
+p {
+    /* 首行缩进 */
+    text-indent: 35px;
+    /* 行高 */
+    line-height: 40px;
+
+}
+
+#plast {
+    text-align: right;
+}
+
+#center {
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+
