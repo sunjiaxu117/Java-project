@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 由于过于繁琐  已经少用了 -->
+    <input type="button" value="获取数据" onclick="getDate()">
+    <div id="div1"></div>
+</body>
+<script>
+    function getDate(){
+        var xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.open("GET",'http://yapi.smart-xwork.cn/mock/169327/emp/list');
+        xmlHttpRequest.send();
+
+        xmlHttpRequest.onreadystatechange = function(){
+            if(xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200){
+                document.getElementById('div1').innerHTML = xmlHttpRequest.responseText;
+            }
+        }
+    }
+</script>
+</html>
